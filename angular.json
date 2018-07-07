@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular2-full-stack": {
+    "Bizbo": {
       "root": "",
       "sourceRoot": "client",
       "projectType": "application",
@@ -20,16 +20,10 @@
               "client/assets",
               "client/assets/favicon.ico"
             ],
-            "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "node_modules/font-awesome/css/font-awesome.min.css",
+            "styles": [             
               "client/styles.css"
             ],
-            "scripts": [
-              "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/tether/dist/js/tether.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -54,18 +48,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular2-full-stack:build"
+            "browserTarget": "Bizbo:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular2-full-stack:build:production"
+              "browserTarget": "Bizbo:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular2-full-stack:build"
+            "browserTarget": "Bizbo:build"
           }
         },
         "test": {
@@ -75,14 +69,8 @@
             "karmaConfig": "client/karma.conf.js",
             "polyfills": "client/polyfills.ts",
             "tsConfig": "client/tsconfig.spec.json",
-            "scripts": [
-              "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/tether/dist/js/tether.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
-            ],
+            "scripts": [],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "node_modules/font-awesome/css/font-awesome.min.css",
               "client/styles.css"
             ],
             "assets": [
@@ -106,7 +94,7 @@
       }
     },
     "angular2-full-stack-e2e": {
-      "root": "",
+      "root": "e2e/",
       "sourceRoot": "",
       "projectType": "application",
       "architect": {
@@ -131,7 +119,7 @@
       }
     }
   },
-  "defaultProject": "angular2-full-stack",
+  "defaultProject": "Bizbo",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",

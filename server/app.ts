@@ -10,7 +10,7 @@ const app = express();
 dotenv.load({ path: '.env' });
 app.set('port', (process.env.PORT || 3000));
 
-app.use('/', express.static(path.join(__dirname, '../public')));
+app.use('/', express.static(path.join(__dirname, '../client')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
@@ -30,7 +30,7 @@ mongoose.connect(mongodbURI)
     setRoutes(app);
 
     app.get('/*', function(req, res) {
-      res.sendFile(path.join(__dirname, '../public/index.html'));
+      res.sendFile(path.join(__dirname, '../client/index.html'));
     });
 
     if (!module.parent) {
