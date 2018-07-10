@@ -1,9 +1,9 @@
 {
-  "name": "angular2-full-stack",
+  "name": "bizbo",
   "version": "6.0.3",
   "license": "MIT",
   "author": "Davide Violante",
-  "description": "Angular Full Stack project built using Angular 2+, Express, Mongoose and Node.",
+  "description": "Bizbo Project built using Angular 5, Express, Mongoose and Node.",
   "angular-cli": {},
   "engines": {
     "node": "8.11.1",

@@ -93,7 +93,7 @@
         }
       }
     },
-    "angular2-full-stack-e2e": {
+    "Bizbo-e2e": {
       "root": "e2e/",
       "sourceRoot": "",
       "projectType": "application",
@@ -102,7 +102,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular2-full-stack:serve"
+            "devServerTarget": "Bizbo:serve"
           }
         },
         "lint": {
