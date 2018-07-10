@@ -38,7 +38,10 @@
             <div ngClass=" card-box service-providers-display-card">
 
               <div ngClass="service-providers-display-grid">
-
+                <ul>
+                  <li *ngFor="let each of providers">
+                    
+                   
                 <div ngClass="service-provider-profile-item">
                   <div ngClass="profile-layout-grid">
                     <div ngClass="profile-image-section">
@@ -47,10 +50,10 @@
                     <div ngClass="profile-desc-section">
                       <div ngClass="profile-desc-grid">
                         <div ngClass="profile-card-name">
-                          <h3>Jason Abbott</h3>
+                          <h3>{{each.name}}</h3>
                         </div>
                         <div ngClass="profile-card-place">
-                          <p>Brooklyn</p>
+                          <p>{{each.place}}</p>
                         </div>
                       </div>
                       <div ngClass="profile-card-connect">
@@ -59,6 +62,9 @@
                     </div>
                   </div>
                 </div>
+              </li>
+            </ul>
+                <!--
 
                 <div ngClass="service-provider-profile-item">
                   <div ngClass="profile-layout-grid">
@@ -165,7 +171,6 @@
                   </div>
                 </div>
 
-                <!--
                 <div class="service-provider-profile-item">
                   <div class="profile-layout-grid">
                     <div class="profile-image-section">
