@@ -5,26 +5,26 @@
     <div class="flex-top-center">
 
       <div class="container">
-        <div ngClass="row">
+        <div class="row">
 
-          <div ngClass="col-lg-3 col-md-12 col-sm-12 col-xs-12 ">
+          <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 ">
 
-            <div ngClass="service-providers-list-menu">
+            <div class="service-providers-list-menu">
 
-              <div ngClass="panel-group">
-                <div ngClass="panel panel-default">
-                  <div data-toggle="collapse" href="#serviceProvidersCollapse" ngClass="panel-heading">
-                    <h4 ngClass="panel-title">
-                      <a ngClass="collapse-list-heading">Service Providers</a>
+              <div class="panel-group">
+                <div class="panel panel-default">
+                  <div data-toggle="collapse" href="#serviceProvidersCollapse" class="panel-heading">
+                    <h4 class="panel-title">
+                      <a class="collapse-list-heading">Service Providers</a>
                     </h4>
                   </div>
-                  <div id="serviceProvidersCollapse" ngClass="panel-collapse collapse">
-                    <ul ngClass="list-group">
-                      <li ngClass="list-group-item service-providers-collapse-list"><a ngClass="service-provider-category-name" routerLink="#">Accountant</a></li>
-                      <li ngClass="list-group-item service-providers-collapse-list"><a ngClass="service-provider-category-name" routerLink="#">Software Developer</a></li>
-                      <li ngClass="list-group-item service-providers-collapse-list"><a ngClass="service-provider-category-name" routerLink="#">Sales Consultant</a></li>
-                      <li ngClass="list-group-item service-providers-collapse-list"><a ngClass="service-provider-category-name" routerLink="#">Banker</a></li>
-                      <li ngClass="list-group-item service-providers-collapse-list"><a ngClass="service-provider-category-name" routerLink="#">Management Consultant</a></li>
+                  <div id="serviceProvidersCollapse" class="panel-collapse collapse">
+                    <ul class="list-group">
+                      <li class="list-group-item service-providers-collapse-list"><a class="service-provider-category-name" routerLink="#">Accountant</a></li>
+                      <li class="list-group-item service-providers-collapse-list"><a class="service-provider-category-name" routerLink="#">Software Developer</a></li>
+                      <li class="list-group-item service-providers-collapse-list"><a class="service-provider-category-name" routerLink="#">Sales Consultant</a></li>
+                      <li class="list-group-item service-providers-collapse-list"><a class="service-provider-category-name" routerLink="#">Banker</a></li>
+                      <li class="list-group-item service-providers-collapse-list"><a class="service-provider-category-name" routerLink="#">Management Consultant</a></li>
                     </ul>
                   </div>
                 </div>
@@ -34,401 +34,78 @@
 
           </div>
 
-          <div ngClass=" col-lg-9 col-md-12 col-sm-12 col-xs-12 ">
-            <div ngClass=" card-box service-providers-display-card">
+          
+          <div class=" col-lg-9 col-md-12 col-sm-12 col-xs-12 ">
+              <div class=" card-box service-providers-display-card">
 
-              <div ngClass="service-providers-display-grid">
-                <ul>
-                  <li *ngFor="let each of providers">
-                    
-                   
-                <div ngClass="service-provider-profile-item">
-                  <div ngClass="profile-layout-grid">
-                    <div ngClass="profile-image-section">
-                      <img ngClass="service-provider-profile-image" src="./assets/images/service-provider-1.png" alt="profile image">
-                    </div>
-                    <div ngClass="profile-desc-section">
-                      <div ngClass="profile-desc-grid">
-                        <div ngClass="profile-card-name">
-                          <h3>{{each.name}}</h3>
-                        </div>
-                        <div ngClass="profile-card-place">
-                          <p>{{each.place}}</p>
-                        </div>
+                  
+                  <div class=" col-lg-4 col-md-12 col-sm-12 col-xs-12 ">
+
+                      <div class="service-providers-display-grid" *ngFor="let each of providers1; let i=index">
+    
+                          <div class="service-provider-profile-item" *ngIf="i<3">
+                            <div class="profile-layout-grid">
+                              <div class="profile-image-section">
+                                <img class="service-provider-profile-image" src="{{each.image}}" alt="profile image">
+                              </div>
+                              <div class="profile-desc-section">
+                                <div class="profile-desc-grid">
+                                  <div class="profile-card-name">
+                                    <h3>{{each.name}}</h3>
+                                  </div>
+                                  <div class="profile-card-place">
+                                    <p>{{each.place}}</p>
+                                  </div>
+                                </div>
+                                <div class="profile-card-connect">
+                                  <a class="link-small" routerlink="#">CONNECT</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+      
                       </div>
-                      <div ngClass="profile-card-connect">
-                        <a ngClass="link-small" routerLink="#">CONNECT</a>
-                      </div>
-                    </div>
+    
                   </div>
-                </div>
-              </li>
-            </ul>
-                <!--
 
-                <div ngClass="service-provider-profile-item">
-                  <div ngClass="profile-layout-grid">
-                    <div ngClass="profile-image-section">
-                      <img ngClass="service-provider-profile-image" src="./assets/images/service-provider-2.png" alt="profile image">
-                    </div>
-                    <div ngClass="profile-desc-section">
-                      <div ngClass="profile-desc-grid">
-                        <div ngClass="profile-card-name">
-                          <h3>Dollie Green</h3>
-                        </div>
-                        <div ngClass="profile-card-place">
-                          <p>Warsaw, Poland</p>
-                        </div>
+
+                  <div class=" col-lg-1 col-md-12 col-sm-12 col-xs-12 "></div>
+
+
+                  <div class=" col-lg-4 col-md-12 col-sm-12 col-xs-12 ">
+
+                      <div class="service-providers-display-grid" *ngFor="let each of providers1 ; let i=index">
+    
+                          <div class="service-provider-profile-item" *ngIf="i>=3 && i<6">
+                            <div class="profile-layout-grid">
+                              <div class="profile-image-section">
+                                <img class="service-provider-profile-image" src="{{each.image}}" alt="profile image">
+                              </div>
+                              <div class="profile-desc-section">
+                                <div class="profile-desc-grid">
+                                  <div class="profile-card-name">
+                                    <h3>{{each.name}}</h3>
+                                  </div>
+                                  <div class="profile-card-place">
+                                    <p>{{each.place}}</p>
+                                  </div>
+                                </div>
+                                <div class="profile-card-connect">
+                                  <a class="link-small" routerlink="#">CONNECT</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+      
                       </div>
-                      <div ngClass="profile-card-connect">
-                        <a ngClass="link-small" routerLink="#">CONNECT</a>
-                      </div>
-                    </div>
+    
                   </div>
-                </div>
+    
+    
 
-                <div ngClass="service-provider-profile-item">
-                  <div ngClass="profile-layout-grid">
-                    <div ngClass="profile-image-section">
-                      <img ngClass="service-provider-profile-image" src="./assets/images/service-provider-3.png" alt="profile image">
-                    </div>
-                    <div ngClass="profile-desc-section">
-                      <div ngClass="profile-desc-grid">
-                        <div ngClass="profile-card-name">
-                          <h3>Bryan Pratt</h3>
-                        </div>
-                        <div ngClass="profile-card-place">
-                          <p>Stockholm, Sweden</p>
-                        </div>
-                      </div>
-                      <div ngClass="profile-card-connect">
-                        <a ngClass="link-small" routerLink="#">CONNECT</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div ngClass="service-provider-profile-item">
-                  <div ngClass="profile-layout-grid">
-                    <div ngClass="profile-image-section">
-                      <img ngClass="service-provider-profile-image" src="./assets/images/service-provider-4.png" alt="profile image">
-                    </div>
-                    <div ngClass="profile-desc-section">
-                      <div ngClass="profile-desc-grid">
-                        <div ngClass="profile-card-name">
-                          <h3>Sally Castillo</h3>
-                        </div>
-                        <div ngClass="profile-card-place">
-                          <p>Brooklyn</p>
-                        </div>
-                      </div>
-                      <div ngClass="profile-card-connect">
-                        <a ngClass="link-small" routerLink="#">CONNECT</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div ngClass="service-provider-profile-item">
-                  <div ngClass="profile-layout-grid">
-                    <div ngClass="profile-image-section">
-                      <img ngClass="service-provider-profile-image" src="./assets/images/service-provider-5.png" alt="profile image">
-                    </div>
-                    <div ngClass="profile-desc-section">
-                      <div ngClass="profile-desc-grid">
-                        <div ngClass="profile-card-name">
-                          <h3>Bryan Pratt</h3>
-                        </div>
-                        <div ngClass="profile-card-place">
-                          <p>Stockholm, Sweden</p>
-                        </div>
-                      </div>
-                      <div ngClass="profile-card-connect">
-                        <a ngClass="link-small" routerLink="#">CONNECT</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div ngClass="service-provider-profile-item">
-                  <div ngClass="profile-layout-grid">
-                    <div ngClass="profile-image-section">
-                      <img ngClass="service-provider-profile-image" src="./assets/images/service-provider-6.png" alt="profile image">
-                    </div>
-                    <div ngClass="profile-desc-section">
-                      <div ngClass="profile-desc-grid">
-                        <div ngClass="profile-card-name">
-                          <h3>Victor Castro</h3>
-                        </div>
-                        <div ngClass="profile-card-place">
-                          <p>Potland, OR</p>
-                        </div>
-                      </div>
-                      <div ngClass="profile-card-connect">
-                        <a ngClass="link-small" routerLink="#">CONNECT</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="service-provider-profile-item">
-                  <div class="profile-layout-grid">
-                    <div class="profile-image-section">
-                      <img class="service-provider-profile-image" src="images/service-provider-1.png" alt="profile image">
-                    </div>
-                    <div class="profile-desc-section">
-                      <div class="profile-desc-grid">
-                        <div class="profile-card-name">
-                          <h3>Jason Abbott</h3>
-                        </div>
-                        <div class="profile-card-place">
-                          <p>Brooklyn</p>
-                        </div>
-                      </div>
-                      <div class="profile-card-connect">
-                        <a class="link-small" href="#">CONNECT</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="service-provider-profile-item">
-                  <div class="profile-layout-grid">
-                    <div class="profile-image-section">
-                      <img class="service-provider-profile-image" src="images/service-provider-2.png" alt="profile image">
-                    </div>
-                    <div class="profile-desc-section">
-                      <div class="profile-desc-grid">
-                        <div class="profile-card-name">
-                          <h3>Dollie Green</h3>
-                        </div>
-                        <div class="profile-card-place">
-                          <p>Warsaw, Poland</p>
-                        </div>
-                      </div>
-                      <div class="profile-card-connect">
-                        <a class="link-small" href="#">CONNECT</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="service-provider-profile-item">
-                  <div class="profile-layout-grid">
-                    <div class="profile-image-section">
-                      <img class="service-provider-profile-image" src="images/service-provider-3.png" alt="profile image">
-                    </div>
-                    <div class="profile-desc-section">
-                      <div class="profile-desc-grid">
-                        <div class="profile-card-name">
-                          <h3>Bryan Pratt</h3>
-                        </div>
-                        <div class="profile-card-place">
-                          <p>Stockholm, Sweden</p>
-                        </div>
-                      </div>
-                      <div class="profile-card-connect">
-                        <a class="link-small" href="#">CONNECT</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="service-provider-profile-item">
-                  <div class="profile-layout-grid">
-                    <div class="profile-image-section">
-                      <img class="service-provider-profile-image" src="images/service-provider-4.png" alt="profile image">
-                    </div>
-                    <div class="profile-desc-section">
-                      <div class="profile-desc-grid">
-                        <div class="profile-card-name">
-                          <h3>Sally Castillo</h3>
-                        </div>
-                        <div class="profile-card-place">
-                          <p>Brooklyn</p>
-                        </div>
-                      </div>
-                      <div class="profile-card-connect">
-                        <a class="link-small" href="#">CONNECT</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="service-provider-profile-item">
-                  <div class="profile-layout-grid">
-                    <div class="profile-image-section">
-                      <img class="service-provider-profile-image" src="images/service-provider-5.png" alt="profile image">
-                    </div>
-                    <div class="profile-desc-section">
-                      <div class="profile-desc-grid">
-                        <div class="profile-card-name">
-                          <h3>Bryan Pratt</h3>
-                        </div>
-                        <div class="profile-card-place">
-                          <p>Stockholm, Sweden</p>
-                        </div>
-                      </div>
-                      <div class="profile-card-connect">
-                        <a class="link-small" href="#">CONNECT</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="service-provider-profile-item">
-                  <div class="profile-layout-grid">
-                    <div class="profile-image-section">
-                      <img class="service-provider-profile-image" src="images/service-provider-6.png" alt="profile image">
-                    </div>
-                    <div class="profile-desc-section">
-                      <div class="profile-desc-grid">
-                        <div class="profile-card-name">
-                          <h3>Victor Castro</h3>
-                        </div>
-                        <div class="profile-card-place">
-                          <p>Potland, OR</p>
-                        </div>
-                      </div>
-                      <div class="profile-card-connect">
-                        <a class="link-small" href="#">CONNECT</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="service-provider-profile-item">
-                  <div class="profile-layout-grid">
-                    <div class="profile-image-section">
-                      <img class="service-provider-profile-image" src="images/service-provider-1.png" alt="profile image">
-                    </div>
-                    <div class="profile-desc-section">
-                      <div class="profile-desc-grid">
-                        <div class="profile-card-name">
-                          <h3>Jason Abbott</h3>
-                        </div>
-                        <div class="profile-card-place">
-                          <p>Brooklyn</p>
-                        </div>
-                      </div>
-                      <div class="profile-card-connect">
-                        <a class="link-small" href="#">CONNECT</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="service-provider-profile-item">
-                  <div class="profile-layout-grid">
-                    <div class="profile-image-section">
-                      <img class="service-provider-profile-image" src="images/service-provider-2.png" alt="profile image">
-                    </div>
-                    <div class="profile-desc-section">
-                      <div class="profile-desc-grid">
-                        <div class="profile-card-name">
-                          <h3>Dollie Green</h3>
-                        </div>
-                        <div class="profile-card-place">
-                          <p>Warsaw, Poland</p>
-                        </div>
-                      </div>
-                      <div class="profile-card-connect">
-                        <a class="link-small" href="#">CONNECT</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="service-provider-profile-item">
-                  <div class="profile-layout-grid">
-                    <div class="profile-image-section">
-                      <img class="service-provider-profile-image" src="images/service-provider-3.png" alt="profile image">
-                    </div>
-                    <div class="profile-desc-section">
-                      <div class="profile-desc-grid">
-                        <div class="profile-card-name">
-                          <h3>Bryan Pratt</h3>
-                        </div>
-                        <div class="profile-card-place">
-                          <p>Stockholm, Sweden</p>
-                        </div>
-                      </div>
-                      <div class="profile-card-connect">
-                        <a class="link-small" href="#">CONNECT</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="service-provider-profile-item">
-                  <div class="profile-layout-grid">
-                    <div class="profile-image-section">
-                      <img class="service-provider-profile-image" src="images/service-provider-4.png" alt="profile image">
-                    </div>
-                    <div class="profile-desc-section">
-                      <div class="profile-desc-grid">
-                        <div class="profile-card-name">
-                          <h3>Sally Castillo</h3>
-                        </div>
-                        <div class="profile-card-place">
-                          <p>Brooklyn</p>
-                        </div>
-                      </div>
-                      <div class="profile-card-connect">
-                        <a class="link-small" href="#">CONNECT</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="service-provider-profile-item">
-                  <div class="profile-layout-grid">
-                    <div class="profile-image-section">
-                      <img class="service-provider-profile-image" src="images/service-provider-5.png" alt="profile image">
-                    </div>
-                    <div class="profile-desc-section">
-                      <div class="profile-desc-grid">
-                        <div class="profile-card-name">
-                          <h3>Bryan Pratt</h3>
-                        </div>
-                        <div class="profile-card-place">
-                          <p>Stockholm, Sweden</p>
-                        </div>
-                      </div>
-                      <div class="profile-card-connect">
-                        <a class="link-small" href="#">CONNECT</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="service-provider-profile-item">
-                  <div class="profile-layout-grid">
-                    <div class="profile-image-section">
-                      <img class="service-provider-profile-image" src="images/service-provider-6.png" alt="profile image">
-                    </div>
-                    <div class="profile-desc-section">
-                      <div class="profile-desc-grid">
-                        <div class="profile-card-name">
-                          <h3>Victor Castro</h3>
-                        </div>
-                        <div class="profile-card-place">
-                          <p>Potland, OR</p>
-                        </div>
-                      </div>
-                      <div class="profile-card-connect">
-                        <a class="link-small" href="#">CONNECT</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                -->
 
               </div>
-
             </div>
-          </div>
 
         </div>
       </div>
@@ -436,12 +113,13 @@
     </div>
 
   </section>
-</div>
+  </div>
+  
 
-<script>
-  $(document).ready(function(){
-    var windowWidth = $(window).width();
-    if(windowWidth > 1024) //for iPad & smaller devices
+  <script>
+    $(document).ready(function(){
+      var windowWidth = $(window).width();
+      if(windowWidth > 1024) //for iPad & smaller devices
       $('.panel-collapse').addClass('in')
-  });
-</script>
+      });
+  </script>
